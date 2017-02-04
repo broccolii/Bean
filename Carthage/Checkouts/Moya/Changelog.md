@@ -1,11 +1,16 @@
 # Next
 
+# 8.0.1
+
+- Fixed an issue where `RxMoyaProvider` never sends `next` or errors if it's disposed before a subscription is made.
+
 # 8.0.0
 
 - **Breaking Change** Renamed `Moya.Error` to `MoyaError`.
 - **Breaking Change** Renamed `verbose` in the NetworkLoggerPlugin to `isVerbose`.
 - **Breaking Change** `TargetType` now specifies its `ParameterEncoding`.
 - **Breaking Change** Removed unused `Moya.Error.data`.
+- **Breaking Change** Renamed `adding(newHttpHeaderFields:)` to `adding(newHTTPHeaderFields:)`.
 - `Moya.Error` now conforms to `LocalizedError` protocol.
 - Added documentation for `TargetType` and associated data structures.
 - Re-add `MultiTarget` to project.

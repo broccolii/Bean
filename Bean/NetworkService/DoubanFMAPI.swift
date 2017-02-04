@@ -10,7 +10,6 @@ import Foundation
 import Moya
 import Result
 
-
 let requestClosure: MoyaProvider<DoubanFM>.RequestClosure = { endpoint, done in
     var request = endpoint.urlRequest
     
@@ -27,7 +26,7 @@ let requestClosure: MoyaProvider<DoubanFM>.RequestClosure = { endpoint, done in
 let DoubanFMProvider = MoyaProvider<DoubanFM>(requestClosure: requestClosure)
 
 public enum DoubanFM {
-    case fetchPlaylist([String : AnyObject])
+    case fetchPlaylist([String : Any])
 }
 
 extension DoubanFM: TargetType {
@@ -39,6 +38,7 @@ extension DoubanFM: TargetType {
             return ""
         }
     }
+    
     public var method: Moya.Method {
         let cookie = HTTPCookie.init(properties: [HTTPCookiePropertyKey.domain: "douban.fm",
                                                   HTTPCookiePropertyKey.name: "start",
@@ -52,21 +52,25 @@ extension DoubanFM: TargetType {
             return .get
         }
     }
+    
     public var parameters: [String: Any]? {
         switch self {
         case .fetchPlaylist(let param):
             return param
         }
     }
+    
     public var parameterEncoding: ParameterEncoding {
         return URLEncoding.default
     }
+    
     public var task: Task {
         switch self {
         case .fetchPlaylist:
             return .request
         }
     }
+    
     public var sampleData: Data {
         switch self {
         case .fetchPlaylist:

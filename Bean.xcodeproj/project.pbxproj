@@ -12,7 +12,7 @@
 		A46D4FCB1E22556200E107F0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A46D4FB91E22556200E107F0 /* Assets.xcassets */; };
 		A46D4FCC1E22556200E107F0 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A46D4FBA1E22556200E107F0 /* Info.plist */; };
 		A46D4FCD1E22556200E107F0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A46D4FBC1E22556200E107F0 /* Main.storyboard */; };
-		A46D4FCE1E22556200E107F0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D4FBE1E22556200E107F0 /* ViewController.swift */; };
+		A46D4FCE1E22556200E107F0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D4FBE1E22556200E107F0 /* MainViewController.swift */; };
 		A46D4FD11E2256B000E107F0 /* BeanPlayerItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46D4FD01E2256B000E107F0 /* BeanPlayerItem.swift */; };
 		A46D4FD31E225A4800E107F0 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46D4FAB1E22556200E107F0 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46D4FD51E225A4800E107F0 /* Moya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46D4FAC1E22556200E107F0 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -24,6 +24,9 @@
 		A46D4FE11E225A4800E107F0 /* RxMoya.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46D4FB21E22556200E107F0 /* RxMoya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46D4FE31E225A4800E107F0 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46D4FB31E22556200E107F0 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A46D4FE51E225A4900E107F0 /* RxTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A46D4FB41E22556200E107F0 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4BD21A01E35DE14006324E7 /* ObjectMapper.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A4BD219D1E35DE09006324E7 /* ObjectMapper.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A4BD21A21E35DF36006324E7 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BD21A11E35DF36006324E7 /* ObjectMapper.framework */; };
+		A4DF9D9E1E35D26F00F69228 /* FetchSongParameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4DF9D9D1E35D26F00F69228 /* FetchSongParameter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +37,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				A46D4FD51E225A4800E107F0 /* Moya.framework in Embed Frameworks */,
+				A4BD21A01E35DE14006324E7 /* ObjectMapper.framework in Embed Frameworks */,
 				A46D4FD31E225A4800E107F0 /* Alamofire.framework in Embed Frameworks */,
 				A46D4FE31E225A4800E107F0 /* RxSwift.framework in Embed Frameworks */,
 				A46D4FDF1E225A4800E107F0 /* RxCocoa.framework in Embed Frameworks */,
@@ -65,9 +69,12 @@
 		A46D4FB91E22556200E107F0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A46D4FBA1E22556200E107F0 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A46D4FBD1E22556200E107F0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A46D4FBE1E22556200E107F0 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A46D4FBE1E22556200E107F0 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A46D4FD01E2256B000E107F0 /* BeanPlayerItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeanPlayerItem.swift; sourceTree = "<group>"; };
 		A4B8887D1E2222A300590196 /* Bean.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bean.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4BD219D1E35DE09006324E7 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = /Users/Broccoli/GitHub/Bean/Bean/Framework/ObjectMapper.framework; sourceTree = "<absolute>"; };
+		A4BD21A11E35DF36006324E7 /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = "<group>"; };
+		A4DF9D9D1E35D26F00F69228 /* FetchSongParameter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchSongParameter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BD21A21E35DF36006324E7 /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +92,7 @@
 		A46D4FAA1E22556200E107F0 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				A4BD21A11E35DF36006324E7 /* ObjectMapper.framework */,
 				A46D4FAB1E22556200E107F0 /* Alamofire.framework */,
 				A46D4FAC1E22556200E107F0 /* Moya.framework */,
 				A46D4FAD1E22556200E107F0 /* ReactiveMoya.framework */,
@@ -120,7 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				A46D4FBC1E22556200E107F0 /* Main.storyboard */,
-				A46D4FBE1E22556200E107F0 /* ViewController.swift */,
+				A46D4FBE1E22556200E107F0 /* MainViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -129,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				A46D4FD01E2256B000E107F0 /* BeanPlayerItem.swift */,
+				A4DF9D9D1E35D26F00F69228 /* FetchSongParameter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -152,6 +162,7 @@
 		A4B8887F1E2222A300590196 /* Bean */ = {
 			isa = PBXGroup;
 			children = (
+				A4DF9D9A1E35D1FF00F69228 /* Extension */,
 				A46D4FCF1E22568300E107F0 /* Model */,
 				A46D4FBB1E22556200E107F0 /* UI */,
 				A46D4FB51E22556200E107F0 /* NetworkService */,
@@ -159,6 +170,13 @@
 				A46D4FAA1E22556200E107F0 /* Framework */,
 			);
 			path = Bean;
+			sourceTree = "<group>";
+		};
+		A4DF9D9A1E35D1FF00F69228 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,7 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A46D4FCE1E22556200E107F0 /* ViewController.swift in Sources */,
+				A4DF9D9E1E35D26F00F69228 /* FetchSongParameter.swift in Sources */,
+				A46D4FCE1E22556200E107F0 /* MainViewController.swift in Sources */,
 				A46D4FD11E2256B000E107F0 /* BeanPlayerItem.swift in Sources */,
 				A46D4FCA1E22556200E107F0 /* AppDelegate.swift in Sources */,
 				A46D4FC91E22556200E107F0 /* DoubanFMAPI.swift in Sources */,
