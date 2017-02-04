@@ -107,9 +107,22 @@ public class BeanPlayerItem: AVPlayerItem {
         }
     }
     
-    init?(with ap: Any) {
-        if ap is [String : AnyObject] {
-            super.init(asset: Avasset(url: URL(string: "")), automaticallyLoadedAssetKeys: nil)
+     public static func getInstent(with JSON: AnyObject) -> BeanPlayerItem? {
+        if JSON is [String : AnyObject] {
+            if let val = (JSON as! [String : AnyObject])["r"] as? Int,
+                val != 0 {
+                return nil
+            }
+
+            if let songList = (JSON as! [String : AnyObject])["song"] as? [[String : Any]] {
+                let musicInfos = MusicInfo(JSON: songList[0])!
+
+                if let resourceURL = URL(string: musicInfos.musicLocation) {
+                    return BeanPlayerItem(asset: AVAsset(url: resourceURL), automaticallyLoadedAssetKeys: nil)
+                }
+                return nil
+            }
+            return nil
         } else {
             return nil
         }

@@ -44,7 +44,7 @@ class MainViewController: NSViewController {
             switch result {
             case let .success(response):
                 do {
-                    if let playerItem = BeanPlayerItem(with: try response.mapJSON()) {
+                    if let playerItem = BeanPlayerItem.getInstent(with: try response.mapJSON() as AnyObject) {
                     
                         self.playerItem = playerItem
                         self.musicPlayer = AVPlayer(playerItem: self.playerItem)
