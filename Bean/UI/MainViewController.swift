@@ -10,8 +10,6 @@ import Cocoa
 import Alamofire
 import AVFoundation
 
-
-
 class MainViewController: NSViewController {
     
     var playerItem: BeanPlayerItem? = nil
@@ -21,16 +19,6 @@ class MainViewController: NSViewController {
         super.viewDidLoad()
         
       
-        
-//        let fetchDictionary = [
-//            "type": "n" as AnyObject,
-//            "channel": 1 as AnyObject,
-//            "sid": "" as AnyObject,
-//            "h": [:].hString() as AnyObject,
-//            "r": randomString() as AnyObject,
-//            "from": "mainsite" as AnyObject,
-//            "kbps": "64" as AnyObject]
-        
         var fetchPara = FetchSongParameter()
         fetchPara.type = "n"
         fetchPara.channel = 2
